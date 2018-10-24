@@ -1,0 +1,38 @@
+<form action="">
+  <input type="text" name="name" [(ngModel)]="formData.name">
+  <br>
+  <input type="text" name="email" [(ngModel)]="formData.email">
+</form>
+<div [class]="formData.name === 'Ed' ? 'test' : ''">
+  {{ formData.name }}
+</div>
+
+<br>
+{{ formData.email }}
+<br>
+<button (click)="submit()" [class]="formData.class">Submit</button>
+<br>
+<br>
+<form action="/contactAction">
+  <label>First name</label><br>
+  <input type="text" name="firstname" placeholder="First name"><br>
+  <label>Last name</label> <br>
+  <input type="text" name="lastname" placeholder="Last name"><br>
+  <label>Address</label> <br>
+  <input type="text" name="address" placeholder="Address"><br>
+  <label>Mobile</label> <br>
+  <input type="text" name="mobile" placeholder="Mobile"><br>
+  <label>Work</label> <br>
+  <input type="text" name="work" placeholder="Work"><br>
+  <label>Home</label> <br>
+  <input type="text" name="home" placeholder="Home"><br>
+  <label>Email</label> <br>
+  <input type="text" name="email" placeholder="Email"><br>
+  <label>Twitter</label> <br>
+  <input type="text" name="twitter" placeholder="Twitter"><br>
+  <label>Instagram</label> <br>
+  <input type="text" name="instagram" placeholder="Instagram"><br>
+  <label>Github</label> <br>
+  <input type="text" name="github" placeholder="Github"><br>
+  <input type="submit" value="Submit">
+</form>

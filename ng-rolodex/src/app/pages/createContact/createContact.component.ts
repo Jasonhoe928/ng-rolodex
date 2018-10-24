@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'contact-page',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  templateUrl: './createContact.component.html',
+  styleUrls: ['./createContact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class CreateContactComponent implements OnInit {
 
 
   title: string = 'Contact Page';
@@ -24,6 +24,15 @@ export class ContactComponent implements OnInit {
   // } = {
   //   header: 'header'
   // }
+
+  
+  nameArray = ["Harsh", "Jamie", "Jason"];
+  nameFunc = () => {
+    for(var i =0; i < this.nameArray.length; i++) {
+      console.log('name array', this.nameArray[i])
+    }
+  }
+
   constructor() {
     const subtitle: string =
       'This is really awesome';
@@ -34,6 +43,7 @@ export class ContactComponent implements OnInit {
       console.log(this.formData);
     }
   ngOnInit() {
+
   }
 
 }
