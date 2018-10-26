@@ -10,7 +10,8 @@ import { CreateContactComponent } from './pages/createContact/createContact.comp
 import { HeaderComponent } from './pages/shared/header/header.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { LoginComponent } from './pages/login/login.component'
-import { ExistingContactsComponent } from './pages/existingContacts/existingContacts.component'
+import { ExistingContactsComponent } from './pages/existingContacts/existingContacts.component';
+import { SearchComponent } from './pages/search/search.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ExistingContactsComponent } from './pages/existingContacts/existingCont
     HeaderComponent,
     ProfileComponent,
     LoginComponent,
-    ExistingContactsComponent
+    ExistingContactsComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

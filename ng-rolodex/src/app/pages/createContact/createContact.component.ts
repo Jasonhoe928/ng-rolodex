@@ -25,14 +25,6 @@ export class CreateContactComponent implements OnInit {
   //   header: 'header'
   // }
 
-  
-  nameArray = ["Harsh", "Jamie", "Jason"];
-  nameFunc = () => {
-    for(var i =0; i < this.nameArray.length; i++) {
-      console.log('name array', this.nameArray[i])
-    }
-  }
-
   constructor() {
     const subtitle: string =
       'This is really awesome';

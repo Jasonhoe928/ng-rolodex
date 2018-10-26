@@ -1,0 +1,15 @@
+<h1>
+    <input type="text" name="search" placeholder="Search..">
+
+  </h1>
+
+  <div class="existingContactsCards" *ngFor="let char of this.backend.characters">
+
+    <p>Name: {{char.name}}</p>
+    <ul>
+      <li>Eye color: {{char.eye_color}}</li>
+      <li>Height: {{char.height}}</li>
+      <li>Mass: {{char.mass}}</li>
+      <li>Skin color: {{char.skin_color}}</li>
+    </ul>
+  </div>

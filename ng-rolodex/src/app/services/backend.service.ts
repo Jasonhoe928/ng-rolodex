@@ -19,4 +19,19 @@ export class BackendService {
   addCharacter(character) {
     this.characters.push(character);
   }
+
+
+
+
+//   nameArray: any[] = ["Harsh", "Jamie", "Jason"];
+
+//   getNameList(id: number) {
+//     return this.nameArray[id];
+//   }
+
+//   nameFunc = () => {
+//     for(var i =0; i < this.nameArray.length; i++) {
+//       console.log('name array', this.nameArray[i])
+//     }
+//   }
 }

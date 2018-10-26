@@ -16,14 +16,14 @@ export class HomeComponent implements OnInit {
   }
     
   ngOnInit() {
-  //   this.characters = this.backend.characters;
-  //   this.backend.addCharacter({ name: 'ed' })
-  //   this.characters.push({ name: 'baseem' })
+    // this.characters = this.backend.characters;
+    // this.backend.addCharacter({ name: 'ed' })
+    // this.characters.push({ name: 'baseem' })
 
   //   this.backend.getCharacter(1)
-  //   .then((Data) => {
-  //     console.log('data', Data)
+  //   .then((data) => {
+  //     console.log('data', data)
   //   })
-  }
+  // }
 
   }
