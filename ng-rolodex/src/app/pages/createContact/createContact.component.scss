@@ -1,7 +1,58 @@
 .test {
   color: red;
 }
+
 #bigCreateBox {
-  background-color: red;
+  // border: 1px solid blue;
+  width: 400px;
+  // margin: 0px 0px 0px 400px;
+}
+
+#formCreateBox {
+  border: 1px solid red;
+  width: 300px;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.form-contact {
   display: inline-block;
+  border: 1px solid yellow;
+}
+
+.container {
+  width: 400px;
+  margin: auto;
+  padding: 20px 15px;
+  background-color: #ddd;
+  box-shadow: 2px 2px 2px 2px #ccc;
+  border-radius: 15px;
+}
+
+body {
+  margin: 0;
+
+}
+
+input {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  // padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+}
+
+.btn-submit {
+  border: 0;
+  padding: 15px;
+  width: 100%;
+  color: white;
+  background-color:darken(blue, 25%);
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px #eee;
+  font-size: 16px;
+  transition: background-color .5s ease-out;
+  &:disabled { background-color: lighten(#ddd, 5%) }
 }

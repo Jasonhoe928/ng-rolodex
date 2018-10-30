@@ -20,6 +20,17 @@ export class BackendService {
     this.characters.push(character);
   }
 
+  register(data) {
+    return Promise.resolve({});
+  }
+
+  login(data) {
+    return Promise.resolve({ username: data.username });
+  }
+
+  logout() {
+    return Promise.resolve({});
+  }
 
 
 
