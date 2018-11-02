@@ -13,13 +13,14 @@
 <button (click)="submit()" [class]="formData.class">Submit</button>
 <br>
 <br> -->
+
 <div id="bigCreateBox">
   <div id="formCreateBox" class="form-contact">
     <form action="/contactAction">
       <label>First name</label><br>
-      <input type="text" name="name" [(ngModel)]="formData.name" (keyup)="validateName()"><br>
+      <input type="text" name="name" placeholder="First name" [(ngModel)]="formData.name" (keyup)="validateName()"><br>
       <label>Last name</label> <br>
-      <input type="text" name="lastN`ame" placeholder="Last name" [(ngModel)]="formData.lastName"><br>
+      <input type="text" name="lastName" placeholder="Last name" [(ngModel)]="formData.lastName"><br>
       <label>Address</label> <br>
       <input type="text" name="address" placeholder="Address"><br>
       <label>Mobile</label> <br>

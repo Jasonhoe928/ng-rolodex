@@ -20,6 +20,11 @@ export class BackendService {
     this.characters.push(character);
   }
 
+  // showCard() {
+  //   let cards = document.getElementsByClassName("existingContactsCards")
+
+  // }
+
   register(data) {
     return Promise.resolve({});
   }

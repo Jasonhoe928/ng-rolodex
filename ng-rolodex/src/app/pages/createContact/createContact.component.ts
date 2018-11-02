@@ -7,9 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateContactComponent implements OnInit {
 
-
-  title: string = 'Contact Page';
-  subtitle: string;
   formData: {
     name: string,
     email: string,
@@ -63,7 +60,7 @@ export class CreateContactComponent implements OnInit {
       console.log(this.formData);
     }
 
-    
+
   ngOnInit() {
 
   }
