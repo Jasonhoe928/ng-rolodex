@@ -16,11 +16,13 @@ export class ExistingContactsComponent implements OnInit {
   characters: object[] = [];
   charName = null;
 
+  users: any;
+
   showHide() {
     this.search = document.getElementById('search');
     this.existingCards = document.getElementsByClassName('existingCards');
     this.charName = document.getElementsByClassName('charName');
-    for (let i = 0; i < this.characters.length; i++) {
+    for (let i = 0; i < this.users.length; i++) {
       if (this.charName[i].innerHTML.toString().toLowerCase().startsWith(this.search.value.toLowerCase())) {
         this.existingCards[i].style.display = 'inline-block';
       } else {
@@ -32,13 +34,22 @@ export class ExistingContactsComponent implements OnInit {
     }
     console.log(this.search.value)
   }
+  
 
-
+  
   ngOnInit() {
     // console.log('nameArray data', this.backend.getNameList(1))
     // this.backend.nameFunc()
     
     this.characters = this.backend.characters;
+    this.users = this.backend.users
+    
+    this.backend.getUser(1)
+    .then(data => {
+      this.users = data
+      console.log('this.users', this.users)
+    })
+
     if(this.characters.length > 0) {
       return
     } else {

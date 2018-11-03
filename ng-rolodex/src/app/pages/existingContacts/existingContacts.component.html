@@ -3,7 +3,7 @@
 
   </h1>
 
-  <div class="existingCards" *ngFor="let char of characters">
+  <!-- <div class="existingCards" *ngFor="let char of characters">
       <div class="charName">{{char.name}}</div>
       <ul>
         <li>Eye color: {{char.eye_color}}</li>
@@ -11,4 +11,14 @@
         <li>Mass: {{char.mass}}</li>
         <li>Skin color: {{char.skin_color}}</li>
       </ul>
-  </div>
+  </div> -->
+
+  <div class="existingCards" *ngFor="let user of users">
+    <div class="charName">{{user.name}}</div>
+    <!-- <ul>
+      <li>Eye color: {{user.eye_color}}</li>
+      <li>Height: {{user.height}}</li>
+      <li>Mass: {{user.mass}}</li>
+      <li>Skin color: {{user.skin_color}}</li>
+    </ul> -->
+</div>

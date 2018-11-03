@@ -5,9 +5,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BackendService {
-  baseUrl: string = 'https://swapi.co/api/';
+  baseUrl: string = 'http://localhost:8989';
 
   characters: any[] = [];
+
+  users: any[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -25,6 +27,13 @@ export class BackendService {
 
   // }
 
+  getUser(id: number) {
+    const url = this.baseUrl + '/users/' + id;
+    console.log('url', url)
+    return this.http.get(url).toPromise();
+  }
+
+
   register(data) {
     return Promise.resolve({});
   }
@@ -37,6 +46,7 @@ export class BackendService {
     return Promise.resolve({});
   }
 
+  
 
 
 //   nameArray: any[] = ["Harsh", "Jamie", "Jason"];
