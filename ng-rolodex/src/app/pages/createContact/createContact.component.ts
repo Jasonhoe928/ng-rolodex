@@ -9,12 +9,10 @@ export class CreateContactComponent implements OnInit {
 
   formData: {
     name: string,
-    email: string,
-    class: string
+    email: string
   } = {
     name: '',
-    email: '',
-    class: 'test'
+    email: ''
   };
 
   validName: boolean = false;
@@ -57,7 +55,7 @@ export class CreateContactComponent implements OnInit {
   }
 
     submit() {
-      console.log(this.formData);
+      console.log('form data', this.formData);
     }
 
 

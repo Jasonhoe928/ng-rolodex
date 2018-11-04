@@ -19,8 +19,6 @@
     <form action="/contactAction">
       <label>First name</label><br>
       <input type="text" name="name" placeholder="First name" [(ngModel)]="formData.name" (keyup)="validateName()"><br>
-      <label>Last name</label> <br>
-      <input type="text" name="lastName" placeholder="Last name" [(ngModel)]="formData.lastName"><br>
       <label>Address</label> <br>
       <input type="text" name="address" placeholder="Address"><br>
       <label>Mobile</label> <br>
@@ -30,7 +28,7 @@
       <label>Home</label> <br>
       <input type="text" name="home" placeholder="Home"><br>
       <label>Email</label> <br>
-      <input type="text" name="email" [(ngModel)]="formData.email" (keyup)="validateEmail()"><br>
+      <input type="text" name="email" placeholder="Email" [(ngModel)]="formData.email" (keyup)="validateEmail()"><br>
       <label>Twitter</label> <br>
       <input type="text" name="twitter" placeholder="Twitter"><br>
       <label>Instagram</label> <br>

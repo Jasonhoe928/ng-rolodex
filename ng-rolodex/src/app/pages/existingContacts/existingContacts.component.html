@@ -1,7 +1,4 @@
-<h1>
-    <input type="text" id="search" (keyup)="showHide()" name="search" placeholder="Search..">
 
-  </h1>
 
   <!-- <div class="existingCards" *ngFor="let char of characters">
       <div class="charName">{{char.name}}</div>
@@ -13,12 +10,12 @@
       </ul>
   </div> -->
 
-  <div class="existingCards" *ngFor="let user of users">
-    <div class="charName">{{user.name}}</div>
-    <!-- <ul>
-      <li>Eye color: {{user.eye_color}}</li>
-      <li>Height: {{user.height}}</li>
-      <li>Mass: {{user.mass}}</li>
-      <li>Skin color: {{user.skin_color}}</li>
-    </ul> -->
+<div class="users">Users:</div>
+<div class="existingCards" *ngFor="let user of allUsers">
+  <div class="users">{{user.name}}</div>
+</div>
+
+<div class="contacts">Contacts:</div>
+<div class="existingCards" *ngFor="let contact of allContacts">
+  <div class="contacts">{{contact.name}}</div>
 </div>

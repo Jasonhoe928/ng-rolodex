@@ -1,3 +1,6 @@
 <h1>
-This is the home page
+  <input type="text" id="search" (keyup)="showHide()" name="search" placeholder="Search..">
 </h1>
+
+<div class="existingCards" *ngFor="let user of allUsers">
+  <div class="charName">{{user.name}}</div>

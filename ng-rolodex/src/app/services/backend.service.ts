@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BackendService {
-  baseUrl: string = 'http://localhost:8989';
+  baseUrl: string = 'http://18.236.174.78:8989';
 
   characters: any[] = [];
 
@@ -22,15 +22,32 @@ export class BackendService {
     this.characters.push(character);
   }
 
-  // showCard() {
-  //   let cards = document.getElementsByClassName("existingContactsCards")
-
+  //get user by id
+  // getUser(id: number) {
+  //   const url = this.baseUrl + '/users/' + id;
+  //   // console.log('url', url)
+  //   return this.http.get(url).toPromise();
   // }
 
-  getUser(id: number) {
-    const url = this.baseUrl + '/users/' + id;
-    console.log('url', url)
+  //get all users
+  getAllUsers() {
+    // console.log('get all users backend fired')
+    const url = this.baseUrl + '/users';
+    console.log('users', url)
     return this.http.get(url).toPromise();
+  }
+
+  // get all contacts
+  getAllContacts() {
+    console.log('get all contacts backend fired')
+    const contactUrl = this.baseUrl + '/contacts';
+    return this.http.get(contactUrl).toPromise();
+  }
+
+  //post new contact form
+  createNewContact() {
+    const newContactUrl = this.baseUrl + '/newContact';
+    return this.http.get(newContactUrl).toPromise();
   }
 
 
