@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendService } from '../../services/backend.service';
+import { FormControl } from '@angular/forms'
 
 @Component({
   selector: 'contact-page',
@@ -9,19 +11,53 @@ export class CreateContactComponent implements OnInit {
 
   formData: {
     name: string,
-    email: string
+    address: string,
+    mobile: string,
+    work: string,
+    home: string,
+    email: string,
+    twitter: string,
+    instagram: string,
+    github: string
   } = {
     name: '',
-    email: ''
+    address: '',
+    mobile: '',
+    work: '',
+    home: '',
+    email: '',
+    twitter: '',
+    instagram: '',
+    github: ''
+
   };
 
   validName: boolean = false;
   validEmail: boolean = false;
 
-  constructor() {
-   
-  }
+  newContact: any;
+
+  // name: string = '';
+  // address: string = '';
+  // mobile: string = '';
+  // work: string = '';
+  // home: string = '';
+  // email: string = '';
+  // twitter: string = '';
+  // instagram: string = '';
+  // github: string = '';
+
+
+  constructor(private backend: BackendService) { }
     
+  //post contact
+  postContact() {
+    
+    console.log('postContact fired', this.formData)
+    this.backend.createNewContact(this.formData)
+    // this.backend.createNewContact(this.name, this.address, this.mobile, this.work, this.home, this.email, this.twitter, this.instagram, this.github)
+  }
+
   validateName() {
     if (!this.formData.name) {
       this.validName = false;
@@ -59,8 +95,6 @@ export class CreateContactComponent implements OnInit {
     }
 
 
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
 
 }

@@ -5,11 +5,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BackendService {
-  baseUrl: string = 'http://18.236.174.78:8989';
+  // baseUrl: string = 'http://18.236.174.78:8989';
+
+  baseUrl: string = 'http://localhost:8989'
 
   characters: any[] = [];
 
   users: any[] = [];
+  obj: any;
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +21,7 @@ export class BackendService {
     return this.http.get(url).toPromise();
   }
   
-  addCharacter(character) {
+  createContact(character) {
     this.characters.push(character);
   }
 
@@ -45,9 +48,13 @@ export class BackendService {
   }
 
   //post new contact form
-  createNewContact() {
+  createNewContact(obj) {
     const newContactUrl = this.baseUrl + '/newContact';
-    return this.http.get(newContactUrl).toPromise();
+    console.log('createNewContact obj', obj)
+    return this.http.post(newContactUrl, obj)
+      .subscribe(res => {
+      console.log('added to DB')
+    });
   }
 
 

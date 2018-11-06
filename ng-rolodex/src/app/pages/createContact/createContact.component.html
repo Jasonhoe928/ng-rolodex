@@ -20,22 +20,22 @@
       <label>First name</label><br>
       <input type="text" name="name" placeholder="First name" [(ngModel)]="formData.name" (keyup)="validateName()"><br>
       <label>Address</label> <br>
-      <input type="text" name="address" placeholder="Address"><br>
+      <input type="text" name="address" placeholder="Address" [(ngModel)]="formData.address"><br>
       <label>Mobile</label> <br>
-      <input type="text" name="mobile" placeholder="Mobile"><br>
+      <input type="text" name="mobile" placeholder="Mobile" [(ngModel)]="formData.mobile"><br>
       <label>Work</label> <br>
-      <input type="text" name="work" placeholder="Work"><br>
+      <input type="text" name="work" placeholder="Work" [(ngModel)]="formData.work"><br>
       <label>Home</label> <br>
-      <input type="text" name="home" placeholder="Home"><br>
+      <input type="text" name="home" placeholder="Home" [(ngModel)]="formData.home"><br>
       <label>Email</label> <br>
       <input type="text" name="email" placeholder="Email" [(ngModel)]="formData.email" (keyup)="validateEmail()"><br>
       <label>Twitter</label> <br>
-      <input type="text" name="twitter" placeholder="Twitter"><br>
+      <input type="text" name="twitter" placeholder="Twitter" [(ngModel)]="formData.twitter"><br>
       <label>Instagram</label> <br>
-      <input type="text" name="instagram" placeholder="Instagram"><br>
+      <input type="text" name="instagram" placeholder="Instagram" [(ngModel)]="formData.instagram"><br>
       <label>Github</label> <br>
-      <input type="text" name="github" placeholder="Github"><br>
-      <button (click)="submit()" [disabled]="isDisabled()" class="btn-submit">Submit</button>
+      <input type="text" name="github" placeholder="Github" [(ngModel)]="formData.github"><br>
+      <button (click)="postContact()" [disabled]="isDisabled()" class="btn-submit">Submit</button>
     </form>
   </div>
 </div>

@@ -72,7 +72,7 @@ app.post('/newContact', (req, res) => {
     github: req.body.github
 
   }
-  console.log('newContact', newContact)
+  console.log('newContact from server', newContact)
 
   Contacts
     .forge(newContact)

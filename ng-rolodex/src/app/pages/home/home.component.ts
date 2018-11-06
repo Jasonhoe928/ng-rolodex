@@ -56,5 +56,6 @@ export class HomeComponent implements OnInit {
       .catch( err => {
         console.log('\n*** getAllUsers ERR from view-contacts', err)
       })
+
   }
 }
