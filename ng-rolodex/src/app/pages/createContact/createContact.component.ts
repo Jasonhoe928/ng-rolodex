@@ -37,25 +37,13 @@ export class CreateContactComponent implements OnInit {
 
   newContact: any;
 
-  // name: string = '';
-  // address: string = '';
-  // mobile: string = '';
-  // work: string = '';
-  // home: string = '';
-  // email: string = '';
-  // twitter: string = '';
-  // instagram: string = '';
-  // github: string = '';
-
 
   constructor(private backend: BackendService) { }
     
   //post contact
   postContact() {
-    
     console.log('postContact fired', this.formData)
     this.backend.createNewContact(this.formData)
-    // this.backend.createNewContact(this.name, this.address, this.mobile, this.work, this.home, this.email, this.twitter, this.instagram, this.github)
   }
 
   validateName() {
@@ -89,11 +77,6 @@ export class CreateContactComponent implements OnInit {
   isDisabled() {
     return !this.validName || !this.validEmail;
   }
-
-    submit() {
-      console.log('form data', this.formData);
-    }
-
 
   ngOnInit() { }
 

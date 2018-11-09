@@ -37,7 +37,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.characters = this.backend.characters;
     this.users = this.backend.users
 
     // get user by id

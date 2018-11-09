@@ -87,7 +87,27 @@ app.post('/newContact', (req, res) => {
     .catch(err => {
       console.log('err', err)
     })
-})  
+})
+
+
+//delete contact
+app.delete('/deleteContact/:contacts_id', (req, res) => {
+  let { contacts_id } = req.params;
+  console.log('req params', req.params)
+  Contacts
+  .where({ contacts_id })
+  .destroy()
+  .then(() => {
+    return Contacts
+    .fetchAll()
+    .then( deleteResult => {
+      res.json(deleteResult.serialize())
+    })
+    .catch(err => {
+      console.log('err', err)
+    })
+  })
+})
 
 app.listen(PORT, () => {
   console.log(`server listening on port ${PORT}`)

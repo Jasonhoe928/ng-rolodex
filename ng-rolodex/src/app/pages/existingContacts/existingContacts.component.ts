@@ -8,19 +8,34 @@ import { BackendService } from '../../services/backend.service';
 })
 export class ExistingContactsComponent implements OnInit { 
   constructor(private backend: BackendService) {}
-
+  
+  users: any;
   allUsers: any;
   allContacts: any;
+  deleteContact: any;
+  
+  // get user by id/delete function
+  delete(id) {
+    // this.backend.getUser(id)
+    // .then(data => {
+    //   console.log('id', id)
+    //   console.log('data', data)
+      this.deleteContact = id;
+      console.log('data coming back deleteContact', this.deleteContact)
+      console.log('all contacts', this.allContacts)
+      this.backend.deleteContact(this.deleteContact)
+      this.allContacts.splice(id, 1);
+      console.log('all contacts deleted', this.allContacts)
+      // window.alert('Deleted');
+      // window.location.href = '/existingContacts'
+    // })
+
+  }
   
   ngOnInit() {
     
-    // get user by id
-    // this.backend.getUser(1)
-    // .then(data => {
-    //   this.users = data
-    //   console.log('this.users', this.users)
-    // })
-
+    
+    
     //get all users
     this.backend.getAllUsers()
       .then(data => {

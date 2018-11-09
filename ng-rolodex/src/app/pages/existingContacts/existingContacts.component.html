@@ -17,5 +17,14 @@
 
 <div class="contacts">Contacts:</div>
 <div class="existingCards" *ngFor="let contact of allContacts">
-  <div class="contacts">{{contact.name}}</div>
+  <div class="contacts">Name: {{contact.name}}</div>
+  <div class="contacts">Address: {{contact.address}}</div>
+  <div class="contacts">Mobile: {{contact.mobile}}</div>
+  <div class="contacts">Work: {{contact.work}}</div>
+  <div class="contacts">Home: {{contact.home}}</div>
+  <div class="contacts">Email: {{contact.email}}</div>
+  <div class="contacts">Twitter: {{contact.twitter}}</div>
+  <div class="contacts">Instagram: {{contact.instagram}}</div>
+  <div class="contacts">Github: {{contact.github}}</div>
+  <button (click)="delete(contact.contacts_id)" class="btn-submit">Delete</button>
 </div>

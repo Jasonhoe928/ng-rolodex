@@ -9,28 +9,23 @@ export class BackendService {
 
   baseUrl: string = 'http://localhost:8989'
 
-  characters: any[] = [];
-
   users: any[] = [];
   obj: any;
 
   constructor(private http: HttpClient) { }
 
-  getCharacter(id: number) {
-    const url = this.baseUrl + 'people/' + id;
-    return this.http.get(url).toPromise();
-  }
-  
-  createContact(character) {
-    this.characters.push(character);
-  }
-
-  //get user by id
-  // getUser(id: number) {
-  //   const url = this.baseUrl + '/users/' + id;
-  //   // console.log('url', url)
+  // getCharacter(id: number) {
+  //   const url = this.baseUrl + 'people/' + id;
   //   return this.http.get(url).toPromise();
   // }
+  
+
+  // get user by id
+  getUser(id: number) {
+    const url = this.baseUrl + '/users/' + id;
+    // console.log('url', url)
+    return this.http.get(url).toPromise();
+  }
 
   //get all users
   getAllUsers() {
@@ -57,6 +52,12 @@ export class BackendService {
     });
   }
 
+  //destroy contact function
+  deleteContact(id) {
+    const deleteContactUrl = this.baseUrl + '/deleteContact/' + id;
+    console.log('delete backend fired', deleteContactUrl);
+    return this.http.delete(deleteContactUrl).toPromise();
+  }
 
   register(data) {
     return Promise.resolve({});
